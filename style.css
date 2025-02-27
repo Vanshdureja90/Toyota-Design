@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary-color: #ff1f1f;
+}
+
+header {
+  display: flex;
+  height: 7vh;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: center;
+}
+header .toyota-letters {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+}
+header .toyota-letters h1 {
+  font-size: 1.6rem;
+  margin-left: 3vh;
+}
+header .toyota-letters img {
+  width: 16%;
+  aspect-ratio: 1/1;
+}
+header .header-ul ul {
+  display: none;
+}
+header .customer-support {
+  display: flex;
+  justify-content: flex-end;
+}
+header .customer-support img {
+  width: 14%;
+  aspect-ratio: 1/1;
+  margin: 0 0.2rem;
+}
+
+main .main-section-img img {
+  width: 100%;
+}
+main .section-ul-bar {
+  display: flex;
+  margin: 1rem;
+}
+main .section-ul-bar .common {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  gap: 2%;
+}
+main .section-ul-bar .common img {
+  width: 50%;
+  height: 60%;
+}
+main .section-ul-bar .common h3 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+main .section-ul-bar .common-nott {
+  display: none;
+}
+main .innova-image img {
+  width: 100%;
+}
+main .toyota-range h2 {
+  text-align: center;
+  margin: 1rem;
+  font-weight: 400;
+}
+main .toyota-range .grid-div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20vw, 1fr));
+  place-items: center;
+  margin: 0 0.5rem;
+}
+main .toyota-range .grid-div .common-div {
+  min-height: 20vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .toyota-range .grid-div .common-div img {
+  width: 100px;
+  aspect-ratio: 1.5/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .toyota-range .grid-div .common-div h4 {
+  text-align: center;
+}
+main .toyota-range .grid-div .common-div p {
+  padding-top: 0.2rem;
+  opacity: 0.6;
+  text-align: center;
+}
+main .awesome-section {
+  width: 100%;
+}
+main .awesome-section h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2vh 0;
+}
+main .awesome-section .awesome-section-image {
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+}
+main .awesome-section .awesome-section-image img {
+  width: 100%;
+  animation: apple 20s linear 0s infinite both;
+}
+main .more-section h2 {
+  text-align: center;
+  margin: 2vh 0;
+}
+main .more-section .data {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  gap: 2vh;
+}
+main .more-section .data img {
+  width: 100vw;
+  animation: applee 40s linear 0s infinite both;
+}
+main footer {
+  background-color: #333333;
+  color: rgb(203, 219, 246);
+  font-size: 1rem;
+  padding: 2vh;
+}
+main footer .footer-section {
+  display: flex;
+}
+main footer .main li {
+  list-style: none;
+}
+main footer .footer-section-top {
+  margin: 2vh 0;
+  width: 50%;
+}
+main footer .footer-section-top li {
+  list-style: none;
+}
+main footer .footer-section-bottom .social-media {
+  margin: 2vh 0;
+}
+main footer .footer-section-bottom .social-media li {
+  list-style: none;
+}
+main footer .footer-section-bottom .social-media div h1 {
+  margin-top: 2vh;
+}
+
+@keyframes apple {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes applee {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 535px) {
+  header {
+    height: 10vh;
+  }
+  main .section-ul-bar .common {
+    justify-content: center;
+  }
+  main .section-ul-bar .common h3 {
+    white-space: nowrap;
+  }
+  main .section-ul-bar .common img {
+    width: 25%;
+    aspect-ratio: 1/1.5;
+  }
+  main .section-ul-bar .common-nott {
+    display: flex;
+  }
+  main .toyota-range .grid-div {
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    overflow: hidden;
+  }
+  main .toyota-range .grid-div .common-div img {
+    width: 80%;
+    aspect-ratio: 1.5/1;
+  }
+  main .awesome-section .awesome-section-image {
+    width: 100%;
+    overflow: hidden;
+    gap: 1vh;
+  }
+  main .awesome-section .awesome-section-image img {
+    animation: none;
+    width: 50%;
+  }
+  main .more-section .data {
+    margin: 0 0vh;
+    width: 100%;
+  }
+  main .more-section .data img {
+    width: 33vw;
+    animation: none;
+  }
+}
+@media (min-width: 535px) and (min-width: 1020px) {
+  header {
+    height: 8vh;
+  }
+  header .toyota-letters img {
+    display: none;
+  }
+  header .header-ul {
+    width: 70vw;
+  }
+  header .header-ul ul {
+    display: flex;
+  }
+  header .header-ul ul li {
+    list-style-type: none;
+    white-space: nowrap;
+  }
+  header .header-ul ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    transition: color ease-in-out 1s;
+  }
+  header .header-ul ul li a:hover {
+    text-decoration: underline;
+    color: #ff1f1f;
+  }
+  main .toyota-range .grid-div {
+    margin: 1rem;
+    grid-template-columns: repeat(5, minmax(10vw, 1fr));
+  }
+  main .toyota-range .grid-div .common-div img {
+    width: 200px;
+  }
+  main footer {
+    background-color: #333333;
+    color: white;
+    font-size: 1rem;
+    padding-bottom: 2vh;
+  }
+  main footer .main ul {
+    display: flex;
+    white-space: nowrap;
+  }
+  main footer .main ul li {
+    list-style-type: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  main footer .footer-section {
+    display: flex;
+  }
+  main footer .footer-section .footer-section-top {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    gap: 2vh;
+  }
+  main footer .footer-section .footer-section-top li {
+    line-height: 2;
+  }
+  main footer .footer-section .footer-section-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  main footer .footer-section .footer-section-bottom .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+  }
+  main footer .footer-section .footer-section-bottom .social-media div h1 {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=style.css.map */

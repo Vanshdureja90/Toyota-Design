@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --primary-color: #ff1f1f;
+}
+
+
+
+header {
+    display: flex;
+    height: 7vh;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+
+    .toyota-letters {
+        display: flex;
+        align-items: center;
+        color: var(--primary-color);
+
+        h1 {
+            font-size: 1.6rem;
+            margin-left: 3vh;
+        }
+
+        img {
+            width: 16%;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    .header-ul {
+        ul {
+            display: none;
+        }
+    }
+
+    .customer-support {
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            width: 14%;
+            aspect-ratio: 1/1;
+            margin: 0 .2rem;
+        }
+    }
+}
+
+main {
+    .main-section-img {
+        img {
+            width: 100%;
+        }
+    }
+
+    .section-ul-bar {
+        display: flex;
+        margin: 1rem;
+
+
+
+        .common {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+            gap: 2%;
+
+            img {
+                width: 50%;
+                height: 60%;
+            }
+
+            h3 {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+
+
+        }
+
+        .common-nott {
+            display: none;
+        }
+
+    }
+
+    .innova-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .toyota-range {
+        h2 {
+            text-align: center;
+            margin: 1rem;
+            font-weight: 400;
+        }
+
+        .grid-div {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(20vw, 1fr));
+            place-items: center;
+            margin: 0 0.5rem;
+
+
+
+            .common-div {
+                min-height: 20vh;
+                width: 40vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 100px;
+                    aspect-ratio: 1.5/1;
+                    object-fit: contain;
+                }
+
+                h4 {
+                    text-align: center;
+                }
+
+                p {
+                    padding-top: .2rem;
+                    opacity: .6;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .awesome-section {
+        width: 100%;
+
+        h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 2vh 0;
+        }
+
+        .awesome-section-image {
+            display: flex;
+            overflow: hidden;
+            width: 100vw;
+
+            img {
+
+                width: 100%;
+                animation: apple 20s linear 0s infinite both;
+            }
+        }
+    }
+
+    .more-section {
+        h2 {
+            text-align: center;
+            margin: 2vh 0;
+        }
+
+        .data {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            gap: 2vh;
+
+            img {
+
+                width: 100vw;
+                animation: applee 40s linear 0s infinite both;
+            }
+        }
+    }
+
+    footer {
+        background-color: #333333;
+        color: rgb(203, 219, 246);
+        font-size: 1rem;
+        .footer-section{
+            display: flex;
+        }
+        
+        padding: 2vh;
+        .main{
+            li{
+                list-style: none;
+            }
+        }
+
+        .footer-section-top {
+            margin: 2vh 0;
+            width: 50%;
+            li{
+                list-style: none;
+            }
+            
+        }
+
+        .footer-section-bottom {
+            .social-media {
+                margin: 2vh 0;
+li{
+    list-style: none;
+}
+                div {
+                    h1 {
+                        margin-top: 2vh;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes apple {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes applee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (min-width:535px) {
+    header {
+        height: 10vh;
+    }
+
+    main {
+        .section-ul-bar {
+
+            .common {
+                justify-content: center;
+
+                h3 {
+                    white-space: nowrap;
+                }
+
+
+
+                img {
+                    width: 25%;
+                    aspect-ratio: 1/1.5;
+                }
+            }
+
+            .common-nott {
+                display: flex;
+            }
+        }
+
+        .toyota-range {
+            .grid-div {
+                grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+                overflow: hidden;
+
+                .common-div {
+                    img {
+                        width: 80%;
+                        aspect-ratio: 1.5/1;
+                    }
+                }
+            }
+        }
+
+        .awesome-section {
+            .awesome-section-image {
+                width: 100%;
+                overflow: hidden;
+                gap: 1vh;
+
+                img {
+                    animation: none;
+                    width: 50%;
+                }
+            }
+        }
+
+        .more-section {
+            .data {
+                margin: 0 0vh;
+                width: 100%;
+
+                img {
+                    width: 33vw;
+                    animation: none;
+                }
+            }
+        }
+
+
+
+    }
+
+
+
+
+
+    @media(min-width:1020px) {
+        header {
+            height: 8vh;
+
+            .toyota-letters {
+                img {
+                    display: none;
+                }
+            }
+
+
+            .header-ul {
+                width: 70vw;
+
+                ul {
+                    display: flex;
+
+
+
+                    li {
+                        list-style-type: none;
+                        white-space: nowrap;
+
+
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            padding: 0 1rem;
+                            font-size: .8rem;
+                            transition: color ease-in-out 1s;
+
+                            &:hover {
+                                text-decoration: underline;
+                                color: #ff1f1f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            .toyota-range {
+                .grid-div {
+                    margin: 1rem;
+                    grid-template-columns: repeat(5, minmax(10vw, 1fr));
+
+                    .common-div {
+
+                        img {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+
+            footer {
+                background-color: #333333;
+                color: white;
+                font-size: 1rem;
+                padding-bottom: 2vh;
+
+                .main {
+                    ul {
+                        display: flex;
+                        white-space: nowrap;
+
+                        li {
+                            list-style-type: none;
+                            padding: 0.5rem 1rem;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .footer-section {
+                    display: flex;
+
+                    .footer-section-top {
+                        display: flex;
+                        justify-content: space-around;
+                        width: 50%;
+                        gap: 2vh;
+
+                        li {
+                            line-height: 2;
+                        }
+                    }
+
+                    .footer-section-bottom {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 50%;
+
+                        .social-media {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10vh;
+
+                            div {
+                                h1 {
+                                    font-size: 3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
